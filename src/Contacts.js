@@ -49,7 +49,7 @@ class Contacts extends Component {
     const fiteredContacts = []
 
     this.contacts.forEach((contact) => {
-      const parsedContactsInfo = (contact.lastName + contact.firstName + contact.phone).toLocaleLowerCase()
+      const parsedContactsInfo = (contact.firstName + ' ' + contact.lastName + contact.phone).toLocaleLowerCase()
 
       if (parsedContactsInfo.includes(this.state.searchValue.toLocaleLowerCase())) {
         if (contact.gender === 'male' && this.state.male) fiteredContacts.push(contact)
